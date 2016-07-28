@@ -5,7 +5,7 @@ USER root
 
 RUN pip install --upgrade pip \
  && pip install cornice 
- && pip install gunicorn
+ && pip install Waitress
 
 
 ENV APPLOC /BackEnd
