@@ -5,4 +5,4 @@ USER root
 
 RUN pip install --upgrade pip \
  && pip install cornice && pip install Waitress && (pip install sqlalchemy;pip install zope.sqlalchemy)
-RUN apk add py-psycopg2  
+RUN apk update;apk add py-psycopg2  
