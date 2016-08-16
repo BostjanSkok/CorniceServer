@@ -12,7 +12,7 @@ RUN apk add python3-dev;apk add  musl-dev
 RUN pip3 install psycopg2
 RUN apk del gcc;apk del python3-dev;apk del musl-dev
 
-RUN apk add openssh-server
+RUN apk add openssh
 RUN mkdir /var/run/sshd
 RUN echo 'root:screencast' | chpasswd
 RUN sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
