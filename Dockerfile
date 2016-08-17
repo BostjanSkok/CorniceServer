@@ -8,9 +8,11 @@ RUN pip install --upgrade pip \
  && pip3 install sqlalchemy && pip3 install zope.sqlalchemy \
  && pip3 install alembic
 RUN apk update;apk add postgresql-dev;apk add gcc
-RUN apk add python3-dev;apk add  musl-dev
-RUN pip3 install psycopg2
-RUN apk del gcc;apk del python3-dev;apk del musl-dev
+RUN apk add python3-dev;apk add  musl-dev;apk add libffi-dev
+RUN pip3 install psycopg2;pip3 install bcrypt
+RUN pip3 install pyramid_tm;pip3 install PyJWT;pip3 install pyramid_jwt
+
+RUN apk del gcc;apk del python3-dev;apk del musl-dev;apk del libffi-dev
 
 RUN apk add openssh
 RUN mkdir /var/run/sshd
