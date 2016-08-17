@@ -13,6 +13,7 @@ RUN pip3 install psycopg2;pip3 install bcrypt
 RUN pip3 install pyramid_tm;pip3 install PyJWT;pip3 install pyramid_jwt
 
 RUN apk del gcc;apk del python3-dev;apk del musl-dev;apk del libffi-dev
+RUN apk add libffi
 
 RUN apk add openssh
 RUN mkdir /var/run/sshd
